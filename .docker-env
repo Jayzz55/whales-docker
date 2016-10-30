@@ -7,7 +7,6 @@ COMPOSE_PROJECT_NAME=whales
 # RAILS_ENV=development
 
 RAILS_ENV=production
-# RAILS_SERVE_STATIC_FILES=true
 
 # Rails log level.
 #   Accepted values: debug, info, warn, error, fatal, or unknown
