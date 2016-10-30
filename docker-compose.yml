@@ -27,7 +27,7 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - '.:/whales'
+      - 'website:/whales'
     env_file:
       - '.docker-env'
 
@@ -38,7 +38,7 @@ services:
     build: .
     command: sidekiq -C config/sidekiq.yml.erb
     volumes:
-      - '.:/whales'
+      - 'sidekiq:/whales'
     env_file:
       - '.docker-env'
 
@@ -57,3 +57,5 @@ services:
 volumes:
   redis:
   postgres:
+  website:
+  sidekiq:
