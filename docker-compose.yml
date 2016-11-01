@@ -11,16 +11,6 @@ services:
     volumes:
       - 'postgres:/var/lib/postgresql/data'
 
-  cadvisor:
-    image: 'google/cadvisor:latest'
-    ports:
-      - '8080:8080'
-    volumes:
-      - '/:/rootfs:ro'
-      - '/var/run:/var/run:rw'
-      - '/sys:/sys:ro'
-      - '/var/lib/docker/:/var/lib/docker:ro'
-
   redis:
     image: 'redis:3.2-alpine'
     command: redis-server --requirepass yourpassword
@@ -33,7 +23,6 @@ services:
     depends_on:
       - 'postgres'
       - 'redis'
-      - 'cadvisor'
     build: .
     ports:
       - '3000:3000'
