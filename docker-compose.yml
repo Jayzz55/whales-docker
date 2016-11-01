@@ -41,8 +41,6 @@ services:
       - '.:/whales'
     env_file:
       - '.docker-env'
-    logging:
-        driver: 'syslog'
 
   sidekiq:
     depends_on:
