@@ -1,25 +1,12 @@
-README
+This is a sample Rails application for deployment using my [docker deploy script](https://github.com/Jayzz55/docker-deploy-script).
 
+This rails app is deployed to a server in docker containers together with the following services:
+* action cable
+* sidekiq
+* postgres
+* redis
+* cadvisor
+* elk stack (elastic search, logstash, and kibana)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To get the app runnning, run: `docker-compose up website`
+To get the elk stack runnning, run: `docker-compose up kibana`
