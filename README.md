@@ -10,3 +10,5 @@ This rails app is deployed to a server in docker containers together with the fo
 
 To get the app runnning, run: `docker-compose up website`
 To get the elk stack runnning, run: `docker-compose up kibana`
+
+This Rails app is generated using [Orats](https://github.com/nickjj/orats) which provides a lot of boilerplate to deploy rails on docker.
